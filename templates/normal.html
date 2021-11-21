@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<hr>
+<h4 class="card-title">正常教師画像作成</h4>
+<hr>
+<form action = "/upload_normal" method = "POST" enctype = "multipart/form-data">
+    <p>
+      wsi(正常)画像のあるフォルダPATHを入力してください。<br>
+      <input type = "text" name = "n_file_path_ndpi" multiple=""/><br>
+      <br>
+      xのサイズを入力してください。<br>
+      <input type = "number" step="100" name = "n_size_x" multiple=""/><br>
+      <br>
+      yのサイズを入力してください。<br>
+      <input type = "number" step="100" name = "n_size_y" multiple=""/><br>
+      <br>
+      切り取る枚数を入力してください。<br>
+      <input type= "number" name="n_num_maisu"  multiple=""/><br>
+      <br>
+      Windowsなら「\\」Linuxなら「/」と入力してください<br>
+      <input type = "text" name = "n_sep" multiple=""/><br>
+      <br>
+      解像度のレベルを入力してください。<br>
+      <input type= "number" name="n_res_level"  multiple=""/><br>
+      <br>
+      <button type="submit">へいこまち！</button>
+    </p>
+</form>
+<hr>
+
+{% endblock %}

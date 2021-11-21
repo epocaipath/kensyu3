@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<hr>
+<h4 class="card-title">jpgへ変換</h4>
+<hr>
+<form action = "/upload_henkan" method = "POST" enctype = "multipart/form-data">
+    <p>
+      PATHを入力してください。<br>
+      <input type = "text" name = "file_path" multiple=""/><br>
+      <br>
+      解像度のレベルを数値で入力してください。(オススメは4)<br>
+      <input type= "number" name="bai"  multiple=""/><br>
+      <br>
+      <button type="submit">へいこまち！</button>
+    </p>
+</form>
+<hr>
+
+{% endblock %}

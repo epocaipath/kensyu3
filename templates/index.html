@@ -1,17 +1,42 @@
-{% extends "layout.html" %} {% block content %}
-
-<form action="/upload" method="post" enctype="multipart/form-data">
-  <input type="file" name="image" accept="image/png, image/jpeg" />
-  <button type="submit">へいこまち！</button>
-</form>
-
-{% if images %} {% for path in images %}
-<div>
-  <img
-    src="images/{{ path }}"
-    style="margin-top: 10px; vertical-align: bottom; width: 200px"
-  />
-  {{ path }}
+{% extends "base.html" %}
+{% block content %}
+<p class="sample_h_4">研究演習</p>
+<hr>
+<div class="card">
+  <div class="card-body">
+    みんなでつくったコードを長谷川が記録として残していきます。
+  </div>
+</div>
+<hr>
+<div class="card-deck">
+  <div class="card">
+    <img src="images/top_image/henkan.jpg" style="margin-top: 10px; vertical-align: bottom; width='100%' height='200' "/>
+    <div class="card-body">
+      <h5 class="card-title">jpgへ変換</h5>
+      <p class="card-text">ndpi画像からjpgに変換します。</p>
+      <a href="/henkan" class="btn btn-primary">変換へ</a>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/top_image/tumor_top.jpg" style="margin-top: 10px; vertical-align: bottom; width='100%' height='200' "/>
+    <div class="card-body">
+      <h5 class="card-title">腫瘍の画像</h5>
+      <p class="card-text">有効な腫瘍画像を切り出します。</p>
+      <a href="/tumor" class="btn btn-primary">腫瘍へ</a>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+    <div class="card">
+    <img src="images/top_image/normal_top.jpg" style="margin-top: 10px; vertical-align: bottom; width='100%' height='200' "/>
+    <div class="card-body">
+      <h5 class="card-title">正常の画像</h5>
+      <p class="card-text">有効な正常画像を切り出します。</p>
+      <a href="/normal" class="btn btn-primary">正常へ</a>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
 </div>
 
-{% endfor %} {% endif %} {% endblock %}
+
+{% endblock %}

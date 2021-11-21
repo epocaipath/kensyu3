@@ -1,0 +1,11 @@
+p.sample_h_4{
+font-size: 1.5em;/* フォントサイズ */
+font-weight: bold;/* フォント太さ */
+padding-top: 1em;
+padding-bottom: 1em;
+margin-bottom: 2em;
+border-top: 3px solid #3f9613;/* 上の線 */
+border-bottom: 3px solid #409614;/* 下の線 */
+color: #409614;/* フォント色 */
+text-align: center;/* テキストの位置 */
+}

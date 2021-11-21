@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<hr>
+<h4 class="card-title">腫瘍教師画像作成</h4>
+<hr>
+<form action = "/upload_tumor" method = "POST" enctype = "multipart/form-data">
+    <p>
+      wsi画像のあるフォルダPATHを入力してください。<br>
+      <input type = "text" name = "file_path_ndpi" multiple=""/><br>
+      <br>
+      アノテーション画像(pngファイル)のあるフォルダPATHを入力してください。<br>
+      <input type = "text" name = "file_path_png" multiple=""/><br>
+      <br>
+      xのサイズを入力してください。<br>
+      <input type = "number" step="100" name = "size_x" multiple=""/><br>
+      <br>
+      yのサイズを入力してください。<br>
+      <input type = "number" step="100" name = "size_y" multiple=""/><br>
+      <br>
+      Windowsなら「\\」Linuxなら「/」と入力してください<br>
+      <input type = "text" name = "sep" multiple=""/><br>
+      <br>
+      切り取る枚数を入力してください。<br>
+      <input type= "number" name="num_maisu"  multiple=""/><br>
+      <br>
+      解像度のレベルを入力してください。<br>
+      <input type= "number" name="res_level"  multiple=""/><br>
+      <br>
+      <button type="submit">へいこまち！</button>
+    </p>
+</form>
+<hr>
+
+{% endblock %}
